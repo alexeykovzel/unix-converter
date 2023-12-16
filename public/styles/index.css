@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+    --even-tr-c: rgb(245, 245, 245);
+    --border-c: #ddd;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    width: 42rem;
+}
+
+table {
+    border: 1px solid var(--border-c);
+    border-radius: 10px;
+    border-spacing: 0;
+    width: 100%;
+}
+
+td {
+    padding: 1.2rem 2rem;
+}
+
+tr:nth-child(even) {
+    background-color: var(--even-tr-c);
+}
+
+input,
+table,
+label {
+    font-size: 1rem;
+}
+
+.center {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.copy {
+    height: 3.2rem;
+    cursor: pointer;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.field input {
+    border: 1px solid var(--border-c);
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    height: 2rem;
+}
+
+#converter {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0 2rem 0;
+    width: 100%;
+    gap: 1rem;
+}
+
+#converter-l {
+    display: flex;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+#converter-l>* {
+    width: 10rem;
+}
+
+#arrow {
+    width: 2rem;
+    margin-top: 2rem;
+}
+
+#unix-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+#unix-time p {
+    font-size: 4.2rem;
+}
+
+#subdate {
+    color: grey;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 50rem) {
+    main {
+        width: 90%;
+    }
+
+    #converter {
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    #converter-l>* {
+        width: 100%;
+    }
+
+    #arrow {
+        margin: 1rem 0 -0.6rem 0;
+    }
+}
+
+@media only screen and (max-width: 32rem) {
+    html {
+        font-size: 65%;
+    }
+
+    #unix-time {
+        gap: 0;
+    }
+    
+    #unix-time p {
+        font-size: 3.2rem;
+    }
+}

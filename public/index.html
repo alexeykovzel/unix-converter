@@ -4,36 +4,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="index.css">
-  <script defer src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
-  <script defer src="/__/firebase/10.7.1/firebase-analytics-compat.js"></script>
-  <script defer src="index.js"></script>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="styles/index.css">
+  <script defer src="scripts/firebase-config.js" type="module"></script>
+  <script defer src="scripts/index.js"></script>
   <title>Unix Converter</title>
 </head>
 
 <body>
-  <main class="center row">
-    <div id="unix-time" class="row">
+  <main class="center">
+    
+    <!-- current unix time (+ copy button) -->
+    <div id="unix-time">
       <p></p>
       <img class="copy" src="assets/copy.jpg" alt="copy">
     </div>
+    
+    <!-- current date -->
     <p id="subdate"></p>
+
+    <!-- unix to/from date converter -->
     <div id="converter">
-      <div class="field">
-        <label for="date-field">Date</label>
-        <input type="date" name="date-field" id="date-field" value="1970-01-01">
-      </div>
-      <div class="field">
-        <label for="time-field">Time</label>
-        <input type="time" name="time-field" id="time-field" value="00:00:00">
+      <div id="converter-l">
+        <div class="field">
+          <label for="date-field">Date</label>
+          <input type="date" name="date-field" id="date-field" value="1970-01-01">
+        </div>
+        <div class="field">
+          <label for="time-field">Time</label>
+          <input type="time" name="time-field" id="time-field" value="00:00:00">
+        </div>
       </div>
       <img id="arrow" src="assets/arrow.png" alt="double-sided arrow">
-      <div class="field">
+      <div id="converter-r" class="field">
         <label for="unix-field">Unix Time</label>
         <input type="text" name="unix-field" id="unix-field" value="0">
       </div>
     </div>
+
+    <!-- unit conversion table -->
     <table>
       <tbody>
         <tr>
@@ -58,6 +67,7 @@
         </tr>
       </tbody>
     </table>
+    
   </main>
 </body>
 
