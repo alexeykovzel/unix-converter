@@ -3,7 +3,6 @@
 :root {
     --table-bg-color: rgb(245, 245, 245);
     --border-color: #c8cbcf;
-    --waves-color: #263b58;
 }
 
 * {
@@ -99,13 +98,4 @@ tr:nth-child(even) {
 #subdate {
     color: grey;
     font-size: 1.4rem;
-}
-
-#bottom-waves svg {
-    height: 4rem;
-    width: 100%;
-}
-
-#bottom-waves .shape-fill {
-    fill: var(--waves-color);
 }
