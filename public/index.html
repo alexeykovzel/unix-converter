@@ -4,17 +4,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Unix Converter</title>
-
+  <link rel="stylesheet" href="index.css">
   <script defer src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
   <script defer src="/__/firebase/10.7.1/firebase-analytics-compat.js"></script>
-
+  <script defer src="index.js"></script>
+  <title>Unix Converter</title>
 </head>
 
 <body>
-
-  <p>{Unix Converter}</p>
-
+  <main class="center row">
+    <div id="unix-time" class="row">
+      <p></p>
+      <img class="copy" src="copy.jpg" alt="copy">
+    </div>
+    <p id="subdate"></p>
+    <div id="converter">
+      <div class="field">
+        <label for="date-field">Date</label>
+        <input type="date" name="date-field" id="date-field" value="1970-01-01">
+      </div>
+      <div class="field">
+        <label for="time-field">Time</label>
+        <input type="time" name="time-field" id="time-field" value="00:00:00">
+      </div>
+      <img id="arrow" src="arrow.png" alt="double-sided arrow">
+      <div class="field">
+        <label for="unix-field">Unix Time</label>
+        <input type="text" name="unix-field" id="unix-field" value="0">
+      </div>
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>1 Hour</td>
+          <td>3600 Seconds</td>
+        </tr>
+        <tr>
+          <td>1 Day</td>
+          <td>86400 Seconds</td>
+        </tr>
+        <tr>
+          <td>1 Week</td>
+          <td>604800 Seconds</td>
+        </tr>
+        <tr>
+          <td>1 Month (30.44 days)</td>
+          <td>2629743 Seconds</td>
+        </tr>
+        <tr>
+          <td>1 Year (365.24 days)</td>
+          <td>31556926 Seconds</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 </body>
 
 </html>
