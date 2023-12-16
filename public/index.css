@@ -21,12 +21,12 @@ main {
 
 input {
     padding: 0.6rem 1rem;
-    border: 1px solid #bbb;
+    border: 1px solid #ccc;
     border-radius: 10px;
 }
 
 table {
-    border: 1px solid #bbb;
+    border: 1px solid #ccc;
     border-spacing: 0;
     border-radius: 10px;
     width: 100%;
