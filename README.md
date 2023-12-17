@@ -1,3 +1,5 @@
-# Unix Converter 🔄
+# Unix Time Tool 🕒
 
-Unix Converter (unixconverter.com) is an easy-to-use website. It shows you the current Unix time and lets you change dates to Unix time and back.
+Unix Time Tool is a simple web app that shows the current Unix time. You can use it to change Unix time to regular dates and back. Check it out at [unix-time-tool.web.app](https://unix-time-tool.web.app).
+
+That's it! Easy and useful.

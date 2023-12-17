@@ -12,7 +12,8 @@
     border: 0;
 }
 
-input[type="date"], input[type="time"] {
+input[type="date"],
+input[type="time"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -139,7 +140,7 @@ tr:nth-child(even) {
     #unix-time {
         gap: 0;
     }
-    
+
     #unix-time p {
         font-size: 3.2rem;
     }

@@ -2,13 +2,13 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCxZalRIf6mWoXhJlJL7KdvjS-XCliBU5E",
-  authDomain: "unix-converter.firebaseapp.com",
-  projectId: "unix-converter",
-  storageBucket: "unix-converter.appspot.com",
-  messagingSenderId: "991388563150",
-  appId: "1:991388563150:web:eccd1c476f98499679c29f",
-  measurementId: "G-Z7PE01K889"
+  apiKey: "AIzaSyDJZL2mZKkXZ5xXjUsZ-sv_BdNJzsd-oFI",
+  authDomain: "unix-time-tool.firebaseapp.com",
+  projectId: "unix-time-tool",
+  storageBucket: "unix-time-tool.appspot.com",
+  messagingSenderId: "611619157383",
+  appId: "1:611619157383:web:180257703cc023bcd28f22",
+  measurementId: "G-LW4NEDM0W6"
 };
 
 const app = initializeApp(firebaseConfig);

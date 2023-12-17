@@ -1,3 +1,26 @@
+// Update time values every second
+let unixTime = document.querySelector('#unix-time p');
+let subdate = document.querySelector('#subdate');
+
+updateTimes();
+setInterval(updateTimes, 1000);
+
+function updateTimes() {
+    unixTime.innerText = getUnixTime();
+    subdate.innerText = getDateValue();
+}
+
+function getUnixTime() {
+    return (Date.now() / 1000) | 0;
+}
+
+function getDateValue() {
+    let options = {
+        day: 'numeric', month: 'short', year: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+    };
+    return new Date().toLocaleDateString('en-US', options);
+}
 
 // Initialize "copy" button 
 let copy = document.querySelector('#unix-time .copy');
@@ -23,30 +46,6 @@ function updateTimeField() {
     let date = new Date(unixField.value * 1000);
     dateField.valueAsDate = date;
     timeField.valueAsDate = date;
-}
-
-// Update time values every second
-let unixTime = document.querySelector('#unix-time p');
-let subdate = document.querySelector('#subdate');
-
-updateTimes();
-setInterval(updateTimes, 1000);
-
-function updateTimes() {
-    unixTime.innerText = getUnixTime();
-    subdate.innerText = getDateValue();
-}
-
-function getUnixTime() {
-    return (Date.now() / 1000) | 0;
-}
-
-function getDateValue() {
-    let options = {
-        day: 'numeric', month: 'short', year: 'numeric',
-        hour: '2-digit', minute: '2-digit', second: '2-digit'
-    };
-    return new Date().toLocaleDateString('en-US', options);
 }
 
 // Show main page
