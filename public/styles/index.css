@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import "main.css";
 
 :root {
-    --even-tr-c: rgb(245, 245, 245);
-    --border-c: #ddd;
+    --primary: rgb(13, 31, 45);
+    --secondary: #39658761;
+
+    --h3-gap: 0.6rem;
 }
 
 * {
@@ -12,37 +15,88 @@
     border: 0;
 }
 
+p, td, input {
+    color: #ddd;
+}
+
+h1, h2, h3, label {
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 4.2rem;
+    letter-spacing: 0.4rem;
+}
+
+h2 {
+    margin: 1rem 0;
+}
+
+h3, label {
+    font-size: 1rem;
+}
+
+h3 {
+    margin-bottom: var(--h3-gap);
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+input {
+    color-scheme: dark;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--primary);
+    display: flex;
+    height: 100%;
+}
+
+main {
+    margin: auto;
+    opacity: 0;
+    width: 70%;
+    margin-top: 8rem;
+}
+
+table {
+    border-radius: 10px;
+    border-spacing: 0;
+    overflow: hidden;
+    background-color: var(--secondary);
+    width: 100%;
+}
+
+td {
+    padding: 1.4rem 2rem;
+}
+
+input {
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: var(--secondary);
+    font-size: 1rem;
+    margin-top: var(--h3-gap);
+    padding: 1rem;
+    width: 100%;
+}
+
 input[type="date"],
 input[type="time"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
-    background-color: white;
-    color: black;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    width: 45rem;
-}
-
-table {
-    border: 1px solid var(--border-c);
-    border-radius: 10px;
-    border-spacing: 0;
-    width: 100%;
-}
-
-td {
-    padding: 1.2rem 2rem;
-}
-
-tr:nth-child(even) {
-    background-color: var(--even-tr-c);
+article {
+    margin-bottom: 2.5rem;
 }
 
 .center {
@@ -58,30 +112,34 @@ tr:nth-child(even) {
 }
 
 .copy {
-    height: 3.2rem;
+    height: 2.2rem;
     cursor: pointer;
 }
 
 .field {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    gap: 0.5rem;
 }
 
-.field input {
-    border: 1px solid var(--border-c);
-    border-radius: 10px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    padding: 1rem;
-    width: 100%;
+#index-l {
+    width: 70%;
+}
+
+#index-r {
+    width: 30%;
+    background-color: var(--secondary);
+    padding: 2rem 4rem;
+}
+
+#times {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #converter {
     display: flex;
     align-items: center;
-    margin: 4rem 0 2rem 0;
+    margin: 6rem 0 3rem 0;
     width: 100%;
     gap: 1rem;
 }
@@ -90,10 +148,6 @@ tr:nth-child(even) {
     display: flex;
     width: 100%;
     gap: 1.5rem;
-}
-
-#converter-l>* {
-    width: 11rem;
 }
 
 #arrow {
@@ -105,16 +159,30 @@ tr:nth-child(even) {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    gap: 1rem;
-}
-
-#unix-time p {
-    font-size: 4.2rem;
+    gap: 1.2rem;
 }
 
 #subdate {
-    color: grey;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 85rem) {
+    body {
+        flex-direction: column;
+    }
+
+    main {
+        margin: 10rem auto 5rem auto;
+        width: 80%;
+    }
+
+    #index-l {
+        width: auto;
+    }
+
+    #index-r {
+        width: auto;
+    }
 }
 
 @media only screen and (max-width: 50rem) {
@@ -127,25 +195,17 @@ tr:nth-child(even) {
         gap: 0rem;
     }
 
-    #converter-l>* {
-        width: 100%;
-    }
-
     #arrow {
-        margin: 1rem 0 -0.6rem 0;
+        margin: 1rem 0 -0.4rem 0;
     }
 }
 
-@media only screen and (max-width: 32rem) {
+@media only screen and (max-width: 36rem) {
     html {
-        font-size: 65%;
+        font-size: 80%;
     }
 
-    #unix-time {
-        gap: 0;
-    }
-
-    #unix-time p {
-        font-size: 3.2rem;
+    h1 {
+        font-size: 2.8rem;
     }
 }

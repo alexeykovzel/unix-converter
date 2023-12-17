@@ -12,63 +12,77 @@
 </head>
 
 <body>
-  <main class="center">
-    
-    <!-- current unix time -->
-    <div id="unix-time">
-      <p></p>
-      <img class="copy" src="assets/copy.jpg" alt="copy">
-    </div>
-    
-    <!-- current date -->
-    <p id="subdate"></p>
-
-    <!-- unix <-> date converter -->
-    <div id="converter">
-      <div id="converter-l">
-        <div class="field">
-          <label for="date-field">Date</label>
-          <input type="date" name="date-field" id="date-field" value="1970-01-01">
+  <div id="index-l">
+    <main>
+      <div id="times">
+        <div id="unix-time">
+          <h1></h1>
+          <img class="copy" src="assets/copy.png" alt="copy">
         </div>
-        <div class="field">
-          <label for="time-field">Time</label>
-          <input type="time" name="time-field" id="time-field" value="00:00:00">
+        <p id="subdate"></p>
+      </div>
+      <div id="converter">
+        <div id="converter-l">
+          <div class="field">
+            <label for="date-field">Date</label>
+            <input type="date" name="date-field" id="date-field" value="1970-01-01">
+          </div>
+          <div class="field">
+            <label for="time-field">Time</label>
+            <input type="time" name="time-field" id="time-field" value="00:00:00">
+          </div>
+        </div>
+        <img id="arrow" src="assets/arrow.png" alt="double-sided arrow">
+        <div id="converter-r" class="field">
+          <label for="unix-field">Unix Time (Seconds)</label>
+          <input type="text" name="unix-field" id="unix-field" value="0">
         </div>
       </div>
-      <img id="arrow" src="assets/arrow.png" alt="double-sided arrow">
-      <div id="converter-r" class="field">
-        <label for="unix-field">Unix Time</label>
-        <input type="text" name="unix-field" id="unix-field" value="0">
-      </div>
-    </div>
-
-    <!-- unit conversion table -->
-    <table>
-      <tbody>
-        <tr>
-          <td>1 Hour</td>
-          <td>3600 Seconds</td>
-        </tr>
-        <tr>
-          <td>1 Day</td>
-          <td>86400 Seconds</td>
-        </tr>
-        <tr>
-          <td>1 Week</td>
-          <td>604800 Seconds</td>
-        </tr>
-        <tr>
-          <td>1 Month (30.44 days)</td>
-          <td>2629743 Seconds</td>
-        </tr>
-        <tr>
-          <td>1 Year (365.24 days)</td>
-          <td>31556926 Seconds</td>
-        </tr>
-      </tbody>
-    </table>
-    
-  </main>
+      <h3>Time units in seconds</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td>1 Hour</td>
+            <td>3600 Seconds</td>
+          </tr>
+          <tr>
+            <td>1 Day</td>
+            <td>86400 Seconds</td>
+          </tr>
+          <tr>
+            <td>1 Week</td>
+            <td>604800 Seconds</td>
+          </tr>
+          <tr>
+            <td>1 Month (30.44 days)</td>
+            <td>2629743 Seconds</td>
+          </tr>
+          <tr>
+            <td>1 Year (365.24 days)</td>
+            <td>31556926 Seconds</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+  <div id="index-r">
+    <article>
+      <h2>What is Unix time?</h2>
+      <p>
+        Unix time, also known as Epoch time, is a system for tracking time in computing. It counts the number of seconds
+        that have elapsed since January 1, 1970, at 00:00:00 Coordinated Universal Time (UTC), minus leap seconds. This
+        method simplifies the process of time calculation in computers, making it a widely adopted standard in programming
+        and operating systems.
+      </p>
+    </article>
+    <article>
+      <h2>What happens on January 19, 2038?</h2>
+      <p>
+        On January 19, 2038, Unix time will exceed the maximum value for a 32-bit integer, causing the "Year 2038
+        problem" where systems using 32-bit time may malfunction, interpreting the date incorrectly as December 13, 1901.
+      </p>
+    </article>
+  </div>
 </body>
 
 </html>
