@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import "main.css";
 
 :root {
     --primary: rgb(13, 31, 45);
@@ -68,14 +67,13 @@ main {
 
 table {
     border-radius: 10px;
-    border-spacing: 0;
-    overflow: hidden;
     background-color: var(--secondary);
+    padding: 0.5rem 0;
     width: 100%;
 }
 
 td {
-    padding: 1.4rem 2rem;
+    padding: 1rem 2rem;
 }
 
 input {
