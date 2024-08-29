@@ -1,14 +1,14 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDJZL2mZKkXZ5xXjUsZ-sv_BdNJzsd-oFI",
-  authDomain: "unix-time-tool.firebaseapp.com",
-  projectId: "unix-time-tool",
-  storageBucket: "unix-time-tool.appspot.com",
-  messagingSenderId: "611619157383",
-  appId: "1:611619157383:web:180257703cc023bcd28f22",
-  measurementId: "G-LW4NEDM0W6"
+  apiKey: "AIzaSyDHLy7HGDwUwOGGDOejiIFCu1iAqZXRIqY",
+  authDomain: "unix-epoch.firebaseapp.com",
+  projectId: "unix-epoch",
+  storageBucket: "unix-epoch.appspot.com",
+  messagingSenderId: "446182918289",
+  appId: "1:446182918289:web:b179fa5242243a4657d730",
+  measurementId: "G-J90R0G01VZ"
 };
 
 const app = initializeApp(firebaseConfig);
